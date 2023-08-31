@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> CSS External</title>
+  
+  
+  <!--No es buena practica mezclar un css externo co estilos internos ni en linea-->
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <style>
+    p {
+      color: green;
+      font-size: 20px;
+    }
+    </style>
+  
+  </head>
+  <body>
+    <h1>CSS External StylesSheet</h1>
+    
+    <p>El CSS externo es el que se especifica en un archivo con extension.css y que enlaza al archivo HTML actual utilizando la etiqueta &lt;link> dentro de &lt;head></p>
+  
+    <p style="color: blue;">Estilo sobrescrito inline</p>
+  </body>
+</html>
