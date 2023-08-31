@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;div></title>
+</head>
+<body>
+  <h1>&lt;footer> en HTML </h1>
+  
+  <main>
+    <p>El elemento &lt;footer> representa un pie de página para el contenido de la <u>sección ancestral más cercana</u> o al <u>elemento raiz </u>.</p>
+
+    <p>Un elemento &lt;footer> generalmente contiene informaciñon sobre el autor del artículo, sección y/o página, dfatos se derechos de autor</p>
+
+    <p>Cuando nos referimos a <strong>sección ancestral más cercana</strong>, nos estamos refiriendo a la sección de jerarquía superior a la sección actual (padre).</p>
+    
+    <p>En el siguiente ejemplo la sección ancestral más cercana (padre) a &lt;footer> es &lt;html></p>
+      <pre>
+        &lt;!DOCTYPE html>
+        &lt;html lang="en">
+        &lt;head>
+          &lt;meta charset="UTF-8">
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+          &lt;title>Document&lt;/title>
+        &lt;/head>
+
+        &lt;body>
+          Cuerpo del documento
+        &lt;/body>
+
+        &lt;footer>
+          &lt;small>Pie de página&lt;/small>
+        &lt;/footer>
+
+        &lt;/html>
+      </pre>
+
+      <pre>
+        &lt;!DOCTYPE html>
+        &lt;html lang="en">
+        &lt;head>
+          &lt;meta charset="UTF-8">
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+          &lt;title>Document&lt;/title>
+        &lt;/head>
+
+        &lt;body>
+          &lt;main>
+            &lt;article>
+              
+              &lt;header>&lt;header>
+
+              Cuerpo del artículo
+
+              &lt;footer>
+                &lt;small>&lt;/small>
+              &lt;/footer>
+
+            &lt;/article>
+          &lt;/main>
+        &lt;/body>
+
+        &lt;/html>        
+      </pre>
+
+    <p>Habitualmente al texto que se muestra en &lt;footer> se le aplica la etiqueta &lt;small>...&lt;/small> ;
+    </p>
+
+  </main>
+</body>
+</html>
