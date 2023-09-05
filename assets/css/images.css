@@ -1,0 +1,51 @@
+/* Keyword values
+border-top-style: none;
+border-top-style: hidden;
+border-top-style: dotted;
+border-top-style: dashed;
+border-top-style: solid;
+border-top-style: double;
+border-top-style: groove;
+border-top-style: ridge;
+border-top-style: inset;
+border-top-style: outset; */
+
+img{
+
+width: 250px;
+height: 250px;
+}
+
+.elp {
+  height: auto;
+  border-width: 25px;
+  border-style: groove;
+  border-color: goldenrod;
+}
+
+.ai_cerebro {
+width: auto;
+height: 150px;
+
+border-width: 30px;
+border-color: green;
+border-style: double;
+}
+
+.ai_uniforme {
+  height: auto; /* auto: Establece el tamaño de la dimensión manteniendo la proporción de la imagen original una vez especificado el nuevo tamaño en la otra dimensión*/
+  border-width: 25px;
+  border-style: dotted;
+  border-color: blue;
+}
+
+.ai_cerebro_variopinto {
+  border-width: 25px;
+  border-style: solid dashed double dotted;
+  border-top-color: red;
+  border-left-color: yellow;
+  border-right-color: green;
+  border-bottom-color: blue;
+  /* border style se aplicará por top y en sentido de las agujas del reloj */
+
+}
