@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen con bordes redondeados</title>
+  <link rel="stylesheet" href="assets/css/images-rounded-borders.css" type="text/css">
+  
+</head>
+<body>
+  <h1>Imagen con bordes redondeados</h1>
+
+  <h2>Borde de 20px</h2>
+  <img class="border-round-20px" src="assets/img/charles_chaplin.jpg" alt="Charles Chaplin">
+  <p></p>
+
+  <h2>Borde de 50px</h2>
+  <img class="border-round-50px" src="assets/img/charles_chaplin.jpg" alt="Charles Chaplin">
+  <p></p>
+
+  <h2>Borde de 100px</h2>
+  <img class="border-round-100px" src="assets/img/charles_chaplin.jpg" alt="Charles Chaplin">
+  <p></p>
+
+  <h2>Borde de 150px</h2>
+  <img class="border-round-150px" src="assets/img/charles_chaplin.jpg" alt="Charles Chaplin">
+  <p></p>
+
+  <h2>Borde de 200px</h2>
+  <p><strong>NOTA:</strong>La geometría de la imagen (en este caso un rectángulo) imposibilita visualizar una imagen redonda</p>
+  <img class="border-round-200px" src="assets/img/charles_chaplin.jpg" alt="Charles Chaplin">
+  <p></p>
+
+  <p><strong>Opciones:</strong>
+    <ol>
+      <li>Redimensionar la imágen con un software de tratamiento de imagenes</li>
+      <li>Redimensionar la imágen medinate CSS</li>
+    </ol>
+
+  <h3>Imagen cuadrada</h3>
+  <img class="border-round-200px" src="assets/img/charles_chaplin_recortada.jpg" alt="Charles Chaplin">
+
+  <h2>Borde rendondeado 25%</h2>
+  <img class="border-round-25percent" src="assets/img/charles_chaplin.jpg" alt="Charles Chaplin">
+
+  <p></p>
+
+  <h2>Heptágono</h2>
+  <img class="heptagono" src="assets/img/charles_chaplin_recortada.jpg" alt="Charles Chaplin">
+
+  <pre>
+
+
+    ---CSSS
+
+    img{
+      width: 400px;
+      height: auto;
+    }
+    
+    .border-round-20px {
+      border-radius: 20px;
+    }
+    
+    .border-round-50px {
+      border-radius: 50px;
+    }
+    
+    .border-round-100px {
+      border-radius: 100px;
+    }
+    
+    .border-round-150px {
+      border-radius: 150px;
+    }
+    
+    .border-round-200px {
+      border-radius: 200px;
+    }
+    
+    .border-round-25percent {
+    border-radius: 10%;
+    }
+    
+    .heptagono{
+      clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+      border: solid red 30px;
+    }
+
+    ---HTML
+    &lt;h2>Borde de 20px&lt;/h2>
+    &lt;img class="border-round-20px" src="assets/img/charles_chaplin.jpg" alt="Charles Chaplin">
+    &lt;p>&lt;/p>
+  
+    &lt;h2>Borde de 50px&lt;/h2>
+    &lt;img class="border-round-50px" src="assets/img/charles_chaplin.jpg" alt="Charles Chaplin">
+    &lt;p>&lt;/p>
+  
+    &lt;h2>Borde de 100px&lt;/h2>
+    &lt;img class="border-round-100px" src="assets/img/charles_chaplin.jpg" alt="Charles Chaplin">
+    &lt;p>&lt;/p>
+  </pre>
+
+</body>
+</html>
