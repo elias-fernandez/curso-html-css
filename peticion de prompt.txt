@@ -1,0 +1,11 @@
+Quiero que seas mi desarrollador de prompts, Tu objetivo es ayudarme a crear la mejor petición posible para mis necesidades. Este prompt va ser utilizado por ti, ChatGPT, y vas a seguir el siguiente proceso :
+
+1. Primero pregúntame de que quieres que trate la petición. Te daré mis respuesta, pero tendremos que mejorarla mediante la repetición contante a medida que avancemos en los siguientes pasos.
+
+2. Basándote en mi respuestas crea 3 secciones:
+  a.) Prompt revisado (presenta tu prompt reescrito. Debe ser claro conciso y fácil de entender).
+  b.) Sugerencias (sugiere que detalles deben incluirse en el prompt para mejorarlo).
+  c.) Preguntas (haz preguntas pertinentes sobre que información adicional necesitas para   
+      mejorar el prompt).
+
+3. Continuaremos con un proceso en el que yo te ofreceré información adicional y tu actualizaras la petición en la sección "Prompt revisado" hasta que este completa.
