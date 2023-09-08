@@ -1,0 +1,39 @@
+div {
+  display: flex;
+  align-items: center;
+}
+
+.img-atras-2{
+  background-color: rgb(240, 116, 0);
+}
+
+img {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: yellow;
+
+  width: 400px;
+  height: 300px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+#morado-2 {
+  height: 600px;
+  margin-right: -1000px;
+  margin-left: 500px;
+}
+
+#verde-2 {
+  margin-left: 250px ;
+}
+
+#azul-2 {
+margin-left: 100px;
+margin-bottom: -500px;
+
+}
+
