@@ -1,0 +1,96 @@
+<!-- Pagina que tenga un div, 5 parrafos, un atributo my-bool=True y my-bool=False y poner en verde los true y en rojo los false -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/40-ejercicio_selectores_atributo.css" type="text/css">
+  <title>Selectores de atributo</title>
+</head>
+<body>
+  <h1>Selectores de atributos en CSS</h1>
+
+  <ol>
+    <li>
+      <p><strong mycolor="darkmagenta">Selector de atributo simple [att]:</strong>
+        Este selector selecciona elementos que tienen un atributo específico, independientemente de su valor. En este caso, se aplicará un estilo a todos los enlaces &lt;a> que tengan el atributo target, sin importar cuál sea su valor.Por ejemplo:</p>
+
+      <pre format = "code">/* Selecciona todos los elementos con el atributo "target" */
+
+          a[target] {
+            color: blue;
+          }
+      </pre>
+    </li>
+
+
+    <li>
+      <p><strong mycolor="darkmagenta">Selector de atributo [att=val]:</strong>
+        Este selector selecciona elementos que tienen un atributo con un valor específico. Este estilo se aplicará solo a los enlaces que tengan el atributo target con el valor "_blank". Por ejemplo:
+
+        <pre format = "code">/* Selecciona todos los enlaces que tengan un atributo "target" con el valor "_blank" */
+          
+          a[target="_blank"] {
+            text-decoration: underline;
+          }
+        </pre>
+      </p>
+    </li>
+
+
+    <li>
+      <p><strong mycolor="darkmagenta">Selector de atributo de palabra clave [att~=val]:</strong>
+        Este selector selecciona elementos cuyo atributo tiene un valor que contiene una palabra clave específica, separada por espacios. Este estilo se aplicará a cualquier elemento que tenga un atributo class con la palabra clave "important", independientemente de las otras clases que pueda tener. Por ejemplo:</p>
+
+        <pre format = "code">/* Selecciona elementos que tengan un atributo "class" que contenga la palabra clave "important" */
+          
+          .important {
+            font-weight: bold;
+          }
+        </pre>
+    </li>
+
+    <li>
+      <p><strong mycolor="darkmagenta">Selector de atributo que comienza con [att|=val]:</strong>
+        Este selector selecciona elementos cuyo atributo comienza con un valor específico seguido de un guion (-) o está igualado a ese valor. Es útil principalmente para seleccionar elementos con atributos de idioma, como el atributo lang. Este estilo se aplicará a elementos con el atributo lang igualado a "es" o que comience con "es-". Por ejemplo:</p>
+
+        <pre format = "code">/* Selecciona elementos con el atributo "lang" igualado a "es" o que comienza con "es-" */
+
+          [lang|=es] {
+          font-family: Arial, sans-serif;
+          }
+        </pre>
+    </li>
+  </ol>
+
+
+  <div my-bool="True">
+    <p my-bool="True">
+      Parrafo 1
+    </p>
+
+
+    <p my-bool="False">
+      Parrafo 2
+    </p>
+
+
+    <p my-bool="True">
+      Parrafo 3
+    </p>
+
+
+    <p my-bool="False">
+      Parrafo 4
+    </p>
+
+
+    <p my-bool="not-True">
+      Parrafo 5
+    </p>
+  </div>
+  
+</body>
+</html>
