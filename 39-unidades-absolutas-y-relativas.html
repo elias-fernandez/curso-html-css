@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/39-unidades-absolutas-y-relativas.css" type="text/css">
+  <title>Unidades absoluta y relativas</title>
+</head>
+<body>
+
+  <h1>Unidades absoluta y relativas en CSS</h1>
+
+
+
+
+  <p >Párrafo en &lt;html> con fuente y tamaño predeterminado del avegador</p>
+
+  <p class="em2" e-name="True">Párrafo en &lt;html> con fuente y tamaño predeterminado del navegador 2m</p>
+
+  <p class="em2" e-name="True">Párrafo en &lt;html> con fuente y tamaño 2em</p>
+
+  <hr>
+
+  <div class="courier">
+    <p>Parrafo en &lt;div> con Courier New 20</p>
+
+    <p class="em2" e-name="True">Parrafo en &lt;div> con Courier New 2em</p>
+
+    <hr>
+
+    <ul>
+      <li>Uno con tamaño y letra de &lt;ul> 10px</li>
+      <li class="em2" e-name="True">Dos -> con tamaño 2em. es decir, dos vecs el tamaño del contenedor &lt;ul> 10px *2 = 20px</li>
+      <li class="rem2" r-name="True">Tres -> con tamaño 2rem, es decir, dos veces el tamaño del elemento raiz &lt;html> 20px * 2 = 40px
+        
+      <p>Observa que tamaño SI es el doble del tamaño del elemento raiz</p>
+
+      </li>
+    </ul>
+
+    <p e-name="True" class="border3"> Todos los elementos mostrados con este estilo son relativos a la etiqueta  &lt;html> y consecuentemente con el tamaño de letra predeterminado de ese contenedor raiz (Root)</p>
+
+  </div>
+  
+</body>
+</html>

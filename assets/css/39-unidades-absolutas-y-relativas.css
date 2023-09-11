@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "courier-new";
+  src: url(/assets/fonts/courier_new/22815_LCOUR.ttf) format("truetype");
+}
+
+.courier {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+div {
+  font-size: 20px;
+}
+
+.em2 {
+  font-size: 2em;
+}
+
+.rem2 {
+  font-size: 2rem;
+}
+
+ul{
+  font-size: 10px;
+}
+
+[e-name] {
+  color: green;
+}
+
+[r-name = "True"] {
+  color: darkmagenta;
+}
+
+.border3 {
+  border: solid 3px;
+}
