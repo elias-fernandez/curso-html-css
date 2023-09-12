@@ -1,0 +1,32 @@
+
+
+h1{
+  margin-bottom: 50px;
+}
+
+#contenedor{
+  position: relative;
+}
+
+
+#solido{
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  height: 200px;
+  margin-top: -0px;
+  background-color: rgb(0, 255, 0, 0.75)
+}
+
+#transparente{
+  position: absolute;
+  z-index: 1;
+  width: 600px;
+  height: 200px;
+  margin-top: -200px;
+  background-color: rgb(255, 255, 0, 0.75);
+}
+
+.subrayado {
+  text-decoration: underline;
+}
