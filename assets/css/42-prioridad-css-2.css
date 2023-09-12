@@ -1,0 +1,21 @@
+pre{
+  background-color: lightgrey;
+}
+
+p{
+  color: mediumslateblue;
+}
+
+#el-parrafo{
+  color: crimson;
+}
+
+.p-text-black{
+  color: black;
+}
+
+.ojo-pelao{
+  background-color: darkorange;
+  color: white;
+  font-weight: bold;
+}

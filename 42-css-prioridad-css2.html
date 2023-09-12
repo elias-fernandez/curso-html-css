@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    p {
+      color: green;
+    }
+    </style>
+  <link rel="stylesheet" href="assets/css/42-prioridad-css-2.css" type="text/css">
+  <title>Prioridades en CSS</title>
+</head>
+<body>
+
+  <h1>Prioridades en CSS</h1>
+
+  <h2>Prioridades en presencia de CSS inline, CSS interno y CSS externo</h2>
+
+  <pre>
+    ---CSS interno
+    &lt;head>
+      &lt;style>
+        p {
+          color: green;
+        }
+      &lt;/style>
+
+      &lt;link rel="stylesheet" href="assets/css/42-prioridad-css-2.css" type="text/css">
+    &lt;/head>
+
+
+    ---CSS externo
+    p {
+      color: mediumslateblue;
+    }
+    
+    #el-parrafo{
+      color: crimson;
+    }
+
+
+    ---HTML
+    &lt;p style="color: blue;">a)Aplicando CSS inline&lt;/p>
+    &lt;p id="el-parrafo" style="color: blue;">b) Aplicando CSS inline + CSS externo&lt;/p>
+    &lt;p>c) Aplicando CSS interno&lt;/p>
+    &lt;p>d) Aplicando CSS externo&lt;/p>
+  </pre>
+
+  <div>
+    <p style="color: blue;">a) Aplicando CSS inline</p>
+    <p id="el-parrafo" style="color: blue;">b) Aplicando CSS inline + CSS externo</p>
+    <p>c) Aplicando CSS interno</p>
+    <p>d) Aplicando CSS externo</p>
+  </div>
+
+  <div>
+    <p class="p-text-black">En los <strong>casos a) y b) se aplica el estilo inline</strong> por tener más prioridad  que el CSS interno, el externo o el ID</p>
+
+    <div class="ojo-pelao">
+      <p class="p-text-black">Miralo de esta forma:</p>
+      <p class="p-text-black">Aunque poseea un ID y este posea un selector de archivo CSS, YO QUIERO QUE ESTE ID sea del color X, y eso es más específico ya que aplica el estilo al elemento que posee ese ID</p>
+    </div>
+    
+    <p class="p-text-black">En los <strong>casos c) y d) se aplica el estilo externo</strong> porque el CSS extern fue llamado en el &lt;head> posteriormente a la declaración de css interno (&lt;style>...&lt;/style>) y al tratarese de elemento &lt;p> en ambas hojas de estilo aplica el case de selectores del mismo tipo con proìedades en conflicto </p>
+  </div>
+  
+</body>
+</html>
