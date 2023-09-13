@@ -1,0 +1,49 @@
+/* Variables globales */
+:root{
+  --margen: 10px;
+}
+
+/* Variables en contexto definido */
+.tool-box{
+  --rojo: rgb(255, 0, 0);
+  --verde: rgb(00, 255, 0);
+  --azul: rgb(00, 00, 255);
+  --chocolate: rgb(122, 62, 5);
+  --grande: 50px;
+  --mediano: 30px;
+  --pequeno: 10px;
+}
+
+.color-pre{
+  --fondo: lightgrey;
+}
+
+/* Selectores */
+#rojo-grande{
+  color: var(--rojo, purple);
+  font-size: var(--grande);
+}
+
+.verde-mediano{
+  color: var(--verde,purple );
+  font-size: var(--mediano);
+}
+
+[attr="azul-pequeno"]{
+  color: var(--azul, purple);
+  font-size: var(--pequeno);
+}
+
+[attr="text-chocolate"]{
+  color: var(--chocolate);
+}
+
+.gris-fondo{
+  background-color: var(--fondo);
+  padding-top: 1em;
+}
+
+
+ul{ 
+margin-left: var(margen); /* ← Variable global */
+}

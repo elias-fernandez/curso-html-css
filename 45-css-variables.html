@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/45-variables.css", type="text/css">
+  <title>Variables</title>
+</head>
+<body>
+  <h1>Variables en CSS</h1>
+  
+  <p>Se definen con dos guiones (<strong>--</strong>)nombre-de-la-variable</p>
+
+  <p>Se usan:</p>
+
+  <pre class="color-pre gris-fondo">
+    tipo-selector {
+      propiedad: var(--nombre-de-la-variable)
+    }
+  </pre>
+  
+  <h2>Variables globales</h2>
+
+  <p>Pueden ser usadas en cualquier lugar de la página</p>
+
+  <p>Se definen dentro del selector <strong>:root</strong></p>
+
+  <pre class="color-pre gris-fondo">
+    ---CSS
+    :root{
+      --margen: 10px;
+    }
+
+    ul{ 
+      margin-left: var(margen); /* ← Variable global */
+      }
+      
+
+    ---HTML
+   &lt;ul>
+    &lt;li>...&lt;/li>
+    &lt;li>---&lt;/li>
+    &lt;li>***&lt;/li>
+   &lt;/ul>
+  </pre>
+
+  <h2>Variables en contexto definido</h2>
+  <p>Se aplicarán en los elementos hijos del elemento en el cual ha sido definido,</p>
+
+  <p>En otras palabras, si se define una variable dentro de un selector de clase, el elemento HTML debe poseer esa clase para que se efectue la sustitución del valor de dicha variable</p>
+
+  <pre class="color-pre gris-fondo">
+
+    ---CSS
+    
+    /* Variables en contexto definido */
+    .tool-box{
+      --rojo: rgb(255, 0, 0);
+      --verde: rgb(00, 255, 0);
+      --azul: rgb(00, 00, 255);
+      --chocolate: rgb(122, 62, 5);
+      --grande: 50px;
+      --mediano: 30px;
+      --pequeno: 10px;
+    }
+
+    /* Selectores */
+
+    #rojo-grande{
+      color: var(--rojo, purple);
+      font-size: var(--grande);
+    }
+    
+    .verde-mediano{
+      color: var(--verde,purple );
+      font-size: var(--mediano);
+    }
+    
+    [attr="azul-pequeno"]{
+      color: var(--azul, purple);
+      font-size: var(--pequeno);
+    }
+    
+    [attr="text-chocolate"]{
+      color: var(--chocolate);
+    }
+    
+    
+    ---HTML
+    &lt;ul>
+      &lt;li class="tool-box" id="rojo-grande">rojo-grande&lt;/li>
+      &lt;li class="tool-box verde-mediano">verde-mediano&lt;/li>
+      &lt;li class="tool-box" attr="azul-pequeno">azul-pequeno&lt;/li>
+      &lt;li class="tool-box" attr="text-chocolate">chocolate&lt;/li>
+    &lt;/ul>
+  </pre>
+
+  <ul>
+    <li class="tool-box" id="rojo-grande">rojo-grande</li>
+    <li class="tool-box verde-mediano">verde-mediano</li>
+    <li class="tool-box" attr="azul-pequeno">azul-pequeno</li>
+    <li class="tool-box" attr="text-chocolate">chocolate</li>
+  </ul>
+
+  <h2>Compatibilidad entre navegdores</h2>
+  <p>Si un navegador como p.e. Google Chrome es capaz de interpretar variables CSS, entonces, supponiendo que establezcamos una variable para el color podría ser utilizada así:</p>
+
+  <pre>
+    ---CSS
+    .paleta-color{
+      --rojo: rgb(255, 0, 0);
+    }
+
+    #texto-rojo{
+      color: var(--rojo, color-de-respaldo);
+    }
+  </pre>
+
+  <p class="color-pre gris-fondo">En el ejemplo anterior si por algún motivo (escribir mal el nombre de la variable: <strong>--roja</strong>) se utilizaria el color de respaldo para mostrar lo que queremos hacer.</p>
+
+  <p>Cuando un navegador no interpreta variables CSS la solución será incluir la misma propiedad antes de la propiedad que utilizó de la variable</p>
+
+  <pre class="color-pre gris-fondo">
+    ---CSS
+    .paleta-color{
+      --rojo: rgb(255, 0, 0);
+      --verde: rgb(0, 255, 0);
+    }
+
+    /*CASO A: sin color de respaldo*/
+    #texto-rojo{
+      color: var(--rojo, color-de-respaldo);
+      color: var(--roja);
+    }
+
+    /*CASO B: sin color de respaldo*/
+
+    .texto-verde {
+      color:rgb(0, 255, 0)
+      color:var(--verde, green)
+    }
+  </pre>
+
+  <p>Es necesario seguir utilizando el color-de-respaldo ya que si se omite y has escrito mal el nombre de la variable no se mostrará color alguno (CASO A) ya que:</p>
+
+  <ol>
+    <li>
+      <p>El navegador leerá e interpretará la propiedad:</p>
+      <pre class="color-pre gris-fondo">
+        color:rgb(255, 0, 0);
+      </pre>
+    </li>
+    
+    <li>
+      <p>Se interpretará la propiedad:</p>
+      
+      <pre class="color-pre gris-fondo">
+        color:var(--roja)
+      </pre>
+      
+      <p>Pero ya que la función <strong>var()</strong> en la propiedad ha sido intepretada pero el nombre de la variable ha sido mal escrito y no existe un color de respaldo y, además,  CSS aplicará la última propiedad válida, entonces, no se mostrará adecuadamente en el navegador.</p>
+    </li>
+  </ol>
+
+  <h2>Prefijos de navegadores</h2>
+  <a href="https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=761:prefijos-css-de-navegador-chrome-firefox-iexplorer-opera-safari-webkit-moz-ms-o-ejemplos-cu01056d&catid=75&Itemid=203" target="_blank">Prefijos CSS de navegadores</a>
+    
+</body>
+</html>
