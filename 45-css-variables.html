@@ -93,19 +93,37 @@
       &lt;li class="tool-box" attr="azul-pequeno">azul-pequeno&lt;/li>
       &lt;li class="tool-box" attr="text-chocolate">chocolate&lt;/li>
     &lt;/ul>
-  </pre>
 
+    &lt;ul class="tool-box">
+      &lt;li  id="rojo-grande">rojo-grande&lt;/li>
+      &lt;li class="verde-mediano">verde-mediano&lt;/li>
+      &lt;li  attr="text-chocolate">chocolate&lt;/li>
+      &lt;li  attr="azul-pequeno">azul-pequeno&lt;/li>
+    &lt;/ul>
+
+  </pre class="color-pre gris-fondo">
+
+  <h3>Aplicando la clase tool-box a cada elemento &lt;li></h3>
   <ul>
     <li class="tool-box" id="rojo-grande">rojo-grande</li>
     <li class="tool-box verde-mediano">verde-mediano</li>
-    <li class="tool-box" attr="azul-pequeno">azul-pequeno</li>
     <li class="tool-box" attr="text-chocolate">chocolate</li>
+    <li class="tool-box" attr="azul-pequeno">azul-pequeno</li>
   </ul>
+  
+  <h3>Aplicando la herencia de clase tool-box en &lt;ul> </h3>
+  <ul class="tool-box">
+    <li  id="rojo-grande">rojo-grande</li>
+    <li class="verde-mediano">verde-mediano</li>
+    <li  attr="text-chocolate">chocolate</li>
+    <li  attr="azul-pequeno">azul-pequeno</li>
+  </ul>
+
 
   <h2>Compatibilidad entre navegdores</h2>
   <p>Si un navegador como p.e. Google Chrome es capaz de interpretar variables CSS, entonces, supponiendo que establezcamos una variable para el color podría ser utilizada así:</p>
 
-  <pre>
+  <pre class="color-pre gris-fondo">
     ---CSS
     .paleta-color{
       --rojo: rgb(255, 0, 0);
@@ -114,9 +132,9 @@
     #texto-rojo{
       color: var(--rojo, color-de-respaldo);
     }
-  </pre>
+  </pre class="color-pre gris-fondo">
 
-  <p class="color-pre gris-fondo">En el ejemplo anterior si por algún motivo (escribir mal el nombre de la variable: <strong>--roja</strong>) se utilizaria el color de respaldo para mostrar lo que queremos hacer.</p>
+  <p>En el ejemplo anterior si por algún motivo (escribir mal el nombre de la variable: <strong>--roja</strong>) se utilizaria el color de respaldo para mostrar lo que queremos hacer.</p>
 
   <p>Cuando un navegador no interpreta variables CSS la solución será incluir la misma propiedad antes de la propiedad que utilizó de la variable</p>
 
